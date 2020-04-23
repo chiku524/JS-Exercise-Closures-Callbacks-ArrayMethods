@@ -297,13 +297,14 @@ function tallyUpDonations(runners) {
  * Study the code for counter1 and counter2. Answer the questions below.
  * 
  * 1. What is the difference between counter1 and counter2?
- *    counter1 is a function that returns a function and invokes that function to increment the count variable
+ *    counter1 is a function that returns a function and invokes that inner function to increment the count variable
  *    counter 2 is just a function that increments the variable count. 
  *    counter1 has made the variable count private, while counter2 is using the count as a global variable.  
  * 2. Which of the two uses a closure? How can you tell?
  *    counter1 uses a closure, and you can tell this because this function is returning a defined function inside of it. It has made the count variable private.
  * 3. In what scenario would the counter1 code be preferable? In what scenario would counter2 be better? 
- *    
+ *    My assumption is that counter1 would be preferable to use if you are not wanting count as a global variable. This would in fact be beneficial since the variable will only be block or function scope.
+ *    Counter2 would be preferable to use if you are going to use the variable count numerous times throughout your whole javascript script. This way you can just reuse the variable with its value in, persay, another function.
 */
 
 // counter1 code
