@@ -346,16 +346,21 @@ function counter2() {
  * etc
 */
 function counterMakerWithLimit(num) {
-  let count = -1;
+  let count = 0;
   return function counter(){
-    if(count === num) {
-      count = -1;
+    if(count === num + 1) {
+      count = 0;
     }
-    return ++count;
+    return count++;
   }
 }
 
-
+// counterMakerWithLimit(3);
+// counter();  0
+// counter();  1
+// counter();  2
+// counter();  3
+// counter();  0
 /////////////// END OF CHALLENGE ///////////////
 /////////////// END OF CHALLENGE ///////////////
 /////////////// END OF CHALLENGE ///////////////
